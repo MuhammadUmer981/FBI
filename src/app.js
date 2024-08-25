@@ -3,11 +3,13 @@ const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 require('dotenv').config();
 const session = require('express-session');
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use(session({
     resave: false,
