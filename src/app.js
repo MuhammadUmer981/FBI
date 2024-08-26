@@ -19,8 +19,4 @@ connectDB();
 
 app.use('/api', userRoutes);
 
-app.get('/', (req, res) => {
-    res.send('Hello from the server');
-});
-
 module.exports = app;

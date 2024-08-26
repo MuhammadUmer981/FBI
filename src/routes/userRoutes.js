@@ -13,5 +13,8 @@ router.post('/login', login);
 router.post('/reset-password', resetPassword);
 router.post('/verify-otp', verifyOtp);
 router.post('/upload-images/:userId', upload.array('images', 5), uploadImages);
+router.get('/', (req, res) => {
+    res.send('Hello from the server');
+});
 
 module.exports = router;
