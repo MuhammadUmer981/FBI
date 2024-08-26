@@ -4,6 +4,7 @@ const userRoutes = require('./routes/userRoutes');
 require('dotenv').config();
 const session = require('express-session');
 const cors = require('cors');
+const redisClient = require('redis').createClient();
 
 const app = express();
 
